@@ -65,3 +65,23 @@ function thirdPattern(n) {
 thirdPattern(rows);
 
 
+//Q 4: Pattern 
+function printfourthPattern(lines) {
+    for (let i = 1; i <= lines; i = i + 2) {
+        let pattern = "";
+        for (let k = 1; k < i; k++) {
+            pattern +=  " ";
+        }
+        for (let j = 1; j <= lines - i+1; j++) {
+            pattern += j+" ";
+        }
+        for (let k = 1; k <= i; k++) {
+            pattern +=  " ";
+        }
+        console.log(pattern);
+        console.log();
+    }
+}
+
+
+printfourthPattern(9);
