@@ -1,33 +1,67 @@
 // Q.1 Pattern 
 function printPattern1(lines) {
-    for (let i = 1; i <= lines; i=i+2) {
+    for (let i = 1; i <= lines; i = i + 2) {
         let pattern = "";
-        // Print spaces
         for (let j = 1; j <= lines - i; j++) {
             pattern += " ";
         }
-        // Print stars
         for (let k = 1; k <= i; k++) {
-            pattern += k+" ";
+            pattern += k + " ";
         }
         console.log(pattern);
+        console.log();
     }
 }
 printPattern1(9);
 
 // Q.2 Pattern 
-function printPattern2(lines) {
-    for (let i = 1; i <= lines; i=i+2) {
-        let pattern = "";
-        // Print spaces
-        for (let j = 1; j <= lines - i; j++) {
-            pattern += " ";
+let rows = 5;
+function secondPattern(rows) {
+    let pattern = "";
+    for (let n = 1; n <= rows; n++) {
+        for (let space = 1; space <= rows - n; space++) {
+            pattern += "  ";
         }
-        // Print stars
-        for (let k = 1; k <= i; k++) {
-            pattern += k+" ";
+        for (let num = 1; num <= n; num++) {
+            pattern += num + " ";
         }
-        console.log(pattern);
+        pattern += "\n";
+        pattern += "\n";
+    }
+    for (let n = 1; n <= rows; n++) {
+        for (let space = 1; space <= n; space++) {
+            pattern += "  ";
+        }
+        for (let num = 1; num <= rows - n; num++) {
+            pattern += num + " ";
+        }
+        pattern += "\n";
+        pattern += "\n";
+    }
+    console.log(pattern);
+}
+secondPattern(rows);
+
+// Q.3 Pattern 
+function thirdPattern(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = i; j >= 1; j--) {
+            row += j + " ";
+        }
+        console.log(row);
+        console.log();
+    }
+
+    for (let i = n - 1; i >= 1; i--) {
+        let row = "";
+        for (let j = i; j >= 1; j--) {
+            row += j + " ";
+        }
+        console.log(row);
+        console.log();
     }
 }
-printPattern2(9);
+thirdPattern(rows);
+
+
