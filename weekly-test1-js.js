@@ -170,22 +170,33 @@
 //Q-7  Write an algorithm to find the length of the longest substring without repeating characters in a given string.
 
 
-function lengthOfLongestSubstring(s) {
-    const map = new Map();
-    let maxLength = 0;
-    let start = 0;
+// function lengthOfLongestSubstring(s) {
+//     const map = new Map();
+//     let maxLength = 0;
+//     let start = 0;
   
-    for (let end = 0; end < s.length; end++) {
-      const char = s[end];
-      if (map.has(char) && map.get(char) >= start) {
-        start = map.get(char) + 1;
-      }
-      map.set(char, end);
-      maxLength = Math.max(maxLength, end - start + 1);
-    }
+//     for (let end = 0; end < s.length; end++) {
+//       const char = s[end];
+//       if (map.has(char) && map.get(char) >= start) {
+//         start = map.get(char) + 1;
+//       }
+//       map.set(char, end);
+//       maxLength = Math.max(maxLength, end - start + 1);
+//     }
   
-    return maxLength;
-  }
-  const inputString = "abcdesabcbb";
-  console.log(lengthOfLongestSubstring(inputString)); 
+//     return maxLength;
+//   }
+//   const inputString = "abcdesabcbb";
+//   console.log(lengthOfLongestSubstring(inputString)); 
+
+function Double(arr, doubleFn) {
+    return arr.map(doubleFn);
+}
+const numbers = [1, 2, 3, 4, 5];
+function double(num) {
+    return num * 2;
+}
+const res = Double(numbers, double);
+console.log(res);
+
   
